@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Strategic Design Studio</title>
+    <meta name="description" content="I design brands that convert and stand out. Premium design studio for ambitious businesses.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-mark">✦</span>
+                <span class="logo-text">Studio</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact" class="nav-cta">Start a Project</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#portfolio" class="mobile-link">Work</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#process" class="mobile-link">Process</a></li>
+            <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-badge reveal-fade">
+                <span class="badge-dot"></span>
+                Available for new projects
+            </div>
+            <h1 class="hero-title reveal-up">
+                I design brands<br>
+                <em>that convert</em><br>
+                and stand out.
+            </h1>
+            <p class="hero-sub reveal-up delay-1">
+                Helping ambitious businesses build identities that attract the right clients, 
+                command premium prices, and grow with intention.
+            </p>
+            <div class="hero-actions reveal-up delay-2">
+                <a href="#portfolio" class="btn btn-primary">
+                    View My Work
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                    Start a Project
+                </a>
+            </div>
+            <div class="hero-stats reveal-up delay-3">
+                <div class="stat">
+                    <span class="stat-number">60+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">Years of Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual reveal-left">
+                    <div class="about-image-wrap">
+                        <div class="about-image-placeholder">
+                            <img src="about-photo.jpeg" 
+                                 alt="ELGCHIRI IBTIHAL - Professional Designer" 
+                                 class="about-photo"
+                                 loading="lazy">
+                        </div>
+                            
+                        <div class="about-tag about-tag-1">
+                            <i class="fas fa-award"></i>
+                            Premium Designer
+                        </div>
+                        <div class="about-tag about-tag-2">
+                            <i class="fas fa-chart-line"></i>
+                            Results-Driven
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <div class="section-label">About Me</div>
+                    <h2 class="section-title">Design is a<br><em>business tool</em>, not just art.</h2>
+                    <p class="about-text">
+                        I'm a freelance designer who bridges the gap between stunning aesthetics 
+                        and measurable business results. Every pixel I place is intentional, 
+                        designed to communicate, convert, and create lasting impressions.
+                    </p>
+                    <p class="about-text">
+                        My approach starts with understanding your business goals before 
+                        opening any design software. I ask the uncomfortable questions, 
+                        challenge assumptions, and deliver work that moves the needle,
+                        not just work that looks good on a mood board.
+                    </p>
+                    <div class="about-pillars">
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-bullseye"></i></div>
+                            <div>
+                                <strong>Strategic First</strong>
+                                <span>Every design decision serves your business goals</span>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-gem"></i></div>
+                            <div>
+                                <strong>Premium Craft</strong>
+                                <span>Obsessive attention to detail in every deliverable</span>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+                            <div>
+                                <strong>Partnership Mindset</strong>
+                                <span>I treat your business like my own</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <div class="section-label">Selected Work</div>
+                <h2 class="section-title">Case Studies &<br><em>Real Results</em></h2>
+                <p class="section-sub">
+                    Projects built on strategy, executed with precision, and measured by impact.
+                </p>
+            </div>
+
+            <div class="portfolio-filters reveal-up delay-1" role="tablist" aria-label="Filter projects by category">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-pressed="true" tabindex="0">All</button>
+                <button class="filter-btn" data-filter="branding" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Branding</button>
+                <button class="filter-btn" data-filter="social" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Social Media</button>
+            </div>
+
+            <div class="portfolio-grid" role="tabpanel">
+                
+                <!-- Project 1: BrownieVerse -->
+                <div class="project-card reveal-up delay-1" data-category="social">
+                    <div class="project-visual">
+                        <img src="brownieverse.png" 
+                             alt="BrownieVerse Gourmet Brownies fusion Start-up Brand."
+                             class="project-image"
+                             loading="lazy">
+                        <div class="project-category-tag">Social Media</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-number">01</span>
+                            <span class="project-type">Brand Identity + Strategy</span>
+                        </div>
+                        <h3 class="project-title">BrownieVerse — Gourmet Brownies Moroccan & International fusion Start-up Brand</h3>
+                        <div class="project-details">
+                            <div class="detail-block">
+                                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
+                                <p>A new artisanal brownie brand wanted to enter a competitive market with premium pricing, but lacked a distinctive identity and online presence to attract trend-conscious customers.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
+                                <p>Complete rebrand — name, visual identity, brand packaging design, loyalty card system, business card design social media content designs</p>
+                            </div>
+                            <div class="detail-block result">
+                                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
+                                <p><strong>Established a strong, cohesive brand look and feel</strong>, enhancing <strong>perceived value</strong>, supporting early <strong>customer engagement</strong>, and laying the foundation for <strong>consistent sales</strong> and <strong>brand growth</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Aura -->
+                <div class="project-card reveal-up delay-2" data-category="social">
+                    <div class="project-visual">
+                        <img src="Aura.png" 
+                             alt="Aura Beauty Brand Social System."
+                             class="project-image"
+                             loading="lazy">
+                        <div class="project-category-tag">Social Media</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-number">02</span>
+                            <span class="project-type">Social Media Design</span>
+                        </div>
+                        <h3 class="project-title">Aura — Beauty start-up Social System</h3>
+                        <div class="project-details">
+                            <div class="detail-block">
+                                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
+                                <p>A young indie beauty brand was invisible on Instagram despite having great products — their feed lacked cohesion and failed to convert followers.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
+                                <p>Designed a cohesive social media system including grid templates, story formats, reel covers, and a structured 90-day content direction to bring clarity, consistency, and a more premium visual presence.</p>
+                            </div>
+                            <div class="detail-block result">
+                                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
+                                <p><strong>Significantly improved brand cohesion and audience engagement</strong>, helping the brand build a <strong>stronger presence on Instagram</strong> and support early traction in both <strong>follower growth</strong> and <strong>product interest</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Verdant -->
+                <div class="project-card reveal-up delay-3" data-category="branding">
+                    <div class="project-visual">
+                        <img src="verdant.png" 
+                             alt="Verdant Luxury Wellness Brand Identity"
+                             class="project-image"
+                             loading="lazy">
+                        <div class="project-category-tag">Branding</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-number">03</span>
+                            <span class="project-type">Brand Identity</span>
+                        </div>
+                        <h3 class="project-title">Verdant — Luxury Wellness Brand</h3>
+                        <div class="project-details">
+                            <div class="detail-block">
+                                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
+                                <p>A wellness startup needed to stand out in a crowded market and build credibility with affluent customers, despite being a new brand with no prior recognition.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
+                                <p>Developed a full brand identity — logo system, typography, color palette, packaging, and brand guidelines — anchored in botanical luxury aesthetics.</p>
+                            </div>
+                            <div class="detail-block result">
+                                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
+                                <p>Generated early interest and excitement, securing a launch waitlist of over 1,200 potential customers within three weeks and establishing a strong perception of premium quality among early audiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Atlas -->
+                <div class="project-card reveal-up delay-1" data-category="branding">
+                    <div class="project-visual">
+                        <img src="atlas.webp" 
+                             alt="Atlas Premium Coffee Roastery — Brand Identity and Packaging Design"
+                             class="project-image"
+                             loading="lazy">
+                        <div class="project-category-tag">Branding</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-number">04</span>
+                            <span class="project-type">Brand Identity + Packaging</span>
+                        </div>
+                        <h3 class="project-title">Atlas — small Coffee Roastery Business</h3>
+                        <div class="project-details">
+                            <div class="detail-block">
+                                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
+                                <p>A newly launched specialty coffee roaster aimed to enter the premium D2C market but lacked the brand presence and visual credibility needed to justify higher price points and earn early customer trust.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
+                                <p>Developed a cohesive brand identity inspired by exploration and craftsmanship, including custom illustrations, elevated packaging design, a simple loyalty concept, and a clear visual direction for digital channels to position the brand as premium from day one.</p>
+                            </div>
+                            <div class="detail-block result">
+                                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
+                                <p>Established a <strong>strong and consistent brand foundation</strong>, <strong>improved perceived value</strong>, and supported early customer acquisition with a <strong>more compelling and trustworthy brand experience</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <div class="section-label">What I Do</div>
+                <h2 class="section-title">Services Built to<br><em>Drive Results</em></h2>
+                <p class="section-sub">
+                    Every service is designed to solve a specific business problem — not just deliver files.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal-up delay-1">
+                    <div class="service-number">01</div>
+                    <div class="service-icon"><i class="fas fa-fingerprint"></i></div>
+                    <h3 class="service-title">Branding & Identity Design</h3>
+                    <p class="service-desc">
+                        Build a brand that commands respect before you say a word. From logo systems to 
+                        complete visual identities, I create brands that position you as the premium choice 
+                        in your market — and make clients want to pay more.
+                    </p>
+                    <ul class="service-list">
+                        <li>Logo & Visual Identity System</li>
+                        <li>Brand Strategy & Positioning</li>
+                        <li>Typography & Color Palette</li>
+                        <li>Brand Guidelines & Standards</li>
+                        <li>Packaging & Print Design</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Discuss Your Brand <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card reveal-up delay-2">
+                    <div class="service-number">02</div>
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="service-title">Social Media Design</h3>
+                    <p class="service-desc">
+                        Stop blending in. Get scroll-stopping social content that builds authority, 
+                        grows your audience, and converts followers into paying customers. 
+                        Your feed becomes your most powerful sales tool.
+                    </p>
+                    <ul class="service-list">
+                        <li>Feed Template Systems</li>
+                        <li>Story & Reels Design</li>
+                        <li>Content Calendar Design</li>
+                        <li>Profile & Highlight Covers</li>
+                        <li>Campaign Visual Direction</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Elevate Your Feed <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card featured reveal-up delay-1">
+                    <div class="service-number">03</div>
+                    <div class="service-icon"><i class="fas fa-magic"></i></div>
+                    <h3 class="service-title">Custom Creative Projects</h3>
+                    <p class="service-desc">
+                        Have a vision that doesn't fit a standard package? I love ambitious, 
+                        unusual, and high-stakes creative briefs. If you need a designer 
+                        who can put your touch & vision in the design creatively — let's talk.
+                    </p>
+                    <ul class="service-list">
+                        <li>Launch & Campaign Design</li>
+                        <li>Creative Direction</li>
+                        <li>Pitch Deck & Presentations</li>
+                        <li>Brand Activation Design</li>
+                        <li>Graphic Design</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Tell Me Your Vision <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <div class="section-label">How I Work</div>
+                <h2 class="section-title">A Process Designed<br>for <em>Clarity & Results</em></h2>
+                <p class="section-sub">
+                    No surprises. No wasted revisions. Just a clear path from brief to launch.
+                </p>
+            </div>
+
+            <div class="process-track">
+                <div class="process-line"></div>
+                <div class="process-step reveal-up delay-1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon"><i class="fas fa-search"></i></div>
+                        <h3>Discovery</h3>
+                        <p>We start with a deep-dive strategy session. I learn your business, your audience, your competitors, and your goals. This is where we align on what success actually looks like before any design work begins.</p>
+                        <div class="step-deliverable"><span><i class="fas fa-check"></i> Brand Brief & Strategy Doc</span></div>
+                    </div>
+                </div>
+                <div class="process-step reveal-up delay-2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Concept</h3>
+                        <p>I explore multiple creative directions and present 2–3 distinct strategic concepts. Each one is grounded in the brief and designed to solve a specific business problem, not just look beautiful.</p>
+                        <div class="step-deliverable"><span><i class="fas fa-check"></i> Concept Presentation & Rationale</span></div>
+                    </div>
+                </div>
+                <div class="process-step reveal-up delay-3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon"><i class="fas fa-pencil-alt"></i></div>
+                        <h3>Design</h3>
+                        <p>We refine the chosen direction into full, polished deliverables. Two rounds of revisions are included. I'm transparent throughout — you always know where we are in the process.</p>
+                        <div class="step-deliverable"><span><i class="fas fa-check"></i> Final Designs + 2 Revision Rounds</span></div>
+                    </div>
+                </div>
+                <div class="process-step reveal-up delay-1">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Delivery</h3>
+                        <p>You receive a complete, organized handoff package with all files, guidelines, and everything you need to launch and maintain your new design. I'm available for questions post-launch.</p>
+                        <div class="step-deliverable"><span><i class="fas fa-check"></i> Full File Handoff + Usage Guide</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <div class="section-label">Client Voices</div>
+                <h2 class="section-title">What Clients Say<br>About <em>Working Together</em></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-up delay-1">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>"Working with this designer really shifted how we approach our brand. It wasn't just about getting a logo — there was a clear strategy behind it. We also saw about a 35% increase in our website conversions after the rebrand."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #1a6b4a, #2d9966);" aria-hidden="true">S</div>
+                        <div>
+                            <strong>Souad Benamil</strong>
+                            <span>Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card featured reveal-up delay-2">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>"J'ai travaillé avec pas mal de designers, mais c'est la première fois que quelqu'un me demande à quoi ressemble le succès pour mon business avant même d'ouvrir Figma. Ça en dit long. On a levé notre seed round environ trois mois après la refonte."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #0f3460, #4a2d5e);" aria-hidden="true">J</div>
+                        <div>
+                            <strong>Abedleillah Sahar</strong>
+                            <span>Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up delay-3">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>"Notre Instagram est passé de gênant à une référence dans l'industrie en 60 jours. Les templates qu'ils ont créés sont tellement efficaces que notre équipe peut désormais produire du contenu aligné avec la marque, même sans expérience en design."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #6b3d85, #4a2d5e);" aria-hidden="true">A</div>
+                        <div>
+                            <strong>Amani Salma</strong>
+                            <span>Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up delay-1">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>"Premium, fast, and totally hands-off. The brief I sent turned into something way better than I ever imagined. The new packaging has become our biggest brand asset."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #5c3d1e, #8b6914);" aria-hidden="true">L</div>
+                        <div>
+                            <strong>Farid Jamli</strong>
+                            <span>Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="cta-orb cta-orb-1"></div>
+            <div class="cta-orb cta-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content reveal-up">
+                <div class="cta-badge"><span class="badge-dot"></span>Ready When You Are</div>
+                <h2 class="cta-title">Let's build something<br><em>worth talking about.</em></h2>
+                <p class="cta-sub">You've seen the work. You know the process. Now let's talk about what we can create together. I take on a limited number of projects each month to ensure every client gets my full attention.</p>
+                <div class="cta-actions">
+                    <a href="#contact" class="btn btn-white">Start Your Project<span class="btn-arrow">→</span></a>
+                    <a href="#portfolio" class="btn btn-outline-white">See More Work</a>
+                </div>
+                <div class="cta-note"><i class="fas fa-clock"></i>Typical response within 24 hours · Limited spots available</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="section-label">Get In Touch</div>
+                    <h2 class="section-title">Ready to<br><em>Start Something?</em></h2>
+                    <p class="contact-desc">Tell me about your project. The more detail you share, the better I can prepare for our conversation. I respond to all serious inquiries within 24 hours.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:elgchiriibtihal@gmail.com" class="contact-method">
+                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                            <div><strong>Email</strong><span>elgchiriibtihal@gmail.com</span></div>
+                        </a>
+                        <a href="https://instagram.com/Elgchiri.Designs" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="contact-method">
+                            <div class="method-icon"><i class="fab fa-instagram"></i></div>
+                            <div><strong>Instagram</strong><span>@Elgchiri.Designs</span></div>
+                        </a>
+                        <a href="https://linkedin.com/in/ibtihal-elgchiri" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="contact-method">
+                            <div class="method-icon"><i class="fab fa-linkedin"></i></div>
+                            <div><strong>LinkedIn</strong><span>in/ibtihal-elgchiri</span></div>
+                        </a>
+                        <a href="https://behance.net/ibtihal-elgchiri" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="contact-method">
+                            <div class="method-icon"><i class="fab fa-behance"></i></div>
+                            <div><strong>Behance</strong><span>behance.net/Ibtihal-elgchiri</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap reveal-right">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Brand</label>
+                            <input type="text" id="company" name="company" placeholder="Your brand name">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="branding">Branding & Identity Design</option>
+                                <option value="social">Social Media Design</option>
+                                <option value="custom">Custom Creative Project</option>
+                                <option value="other">Not sure yet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Project Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range...</option>
+                                <option value="3k-5k">3,000 MAD – 5,000 MAD</option>
+                                <option value="5k-7k">5,000 MAD – 7,000 MAD</option>
+                                <option value="7k-10k">7,000 MAD – 10,000 MAD</option>
+                                <option value="10k+">10,000+ MAD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Me About Your Project</label>
+                            <textarea id="message" name="message" rows="5" placeholder="What are you working on? What results are you hoping to achieve? Any timeline requirements?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send My Brief<span class="btn-arrow">→</span>
+                        </button>
+                        <p class="form-note"><i class="fas fa-lock"></i> Your information is kept private and never shared.</p>
+                    </form>
+
+                    <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+                        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. I'll review your brief and respond within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <span class="logo-mark">✦</span>
+                        <span class="logo-text">Studio</span>
+                    </a>
+                    <p>Strategic design for ambitious brands. Building identities that convert and endure.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/Elgchiri.Designs" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://behance.net/ibtihal-elgchiri" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ibtihal-elgchiri" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Branding & Identity</a></li>
+                        <li><a href="#services">Social Media Design</a></li>
+                        <li><a href="#services">Custom Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Work</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Say Hello</h4>
+                    <a href="mailto:elgchiriibtihal@gmail.com" class="footer-email">elgchiriibtihal@gmail.com</a>
+                    <a href="#contact" class="btn btn-primary btn-sm">Start a Project</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Studio. All rights reserved. Crafted with intention.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
