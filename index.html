@@ -186,6 +186,8 @@
                 <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-pressed="true" tabindex="0">All</button>
                 <button class="filter-btn" data-filter="branding" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Branding</button>
                 <button class="filter-btn" data-filter="social" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Social Media</button>
+                 <button class="filter-btn" data-filter="website" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Website Design</button>
+</div>
             </div>
 
             <div class="portfolio-grid" role="tabpanel">
@@ -317,7 +319,68 @@
                         </div>
                     </div>
                 </div>
-
+<!-- Project 5: Website Design Example -->
+<div class="project-card reveal-up delay-2" data-category="website">
+    <div class="project-visual project-visual-video">
+        <!-- Video Player with Fallback Image -->
+        <video 
+            class="project-video" 
+            poster="website-preview-thumb.jpg" 
+            preload="metadata" 
+            playsinline 
+            muted 
+            loop
+            aria-label="Website design preview video">
+            <source src="website-preview.mp4" type="video/mp4">
+            <!-- Fallback image if video fails to load -->
+            <img src="website-fallback.png" alt="Website design preview" class="project-image">
+        </video>
+        
+        <!-- Play Button Overlay (triggers video play on click) -->
+        <button class="video-play-btn" aria-label="Play preview video">
+            <i class="fas fa-play"></i>
+        </button>
+        
+        <div class="project-category-tag">Website Design</div>
+    </div>
+    <div class="project-content">
+        <div class="project-meta">
+            <span class="project-number">05</span>
+            <span class="project-type">Web Design + Development</span>
+        </div>
+        <h3 class="project-title">BrownieVerse — Premium E-commerce Website</h3>
+        <div class="project-details">
+            <div class="detail-block">
+                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
+                <p>A Start-up Moroccan Brand needed a high-converting website that reflected their premium positioning while providing an intuitive shopping experience across all devices.</p>
+            </div>
+            <div class="detail-block">
+                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
+                <p>  <strong>End-to-end brand system + conversion-focused ordering experience</strong>, 
+        designed to position BrownieVerse as a premium artisan brand in Morocco's competitive dessert market. 
+        Delivered a culturally-rooted visual identity (Moroccan-global fusion aesthetics), 
+        a streamlined <strong>"Commandi Online" ordering flow</strong> with clear delivery windows, 
+        and WhatsApp integration for <strong>&lt;60s order confirmations</strong>. 
+        Built the <strong>"Pirate Crew" loyalty program</strong> to drive retention through exclusivity, 
+        lifetime price locks, and behind-the-scenes access — turning one-time buyers into brand advocates.
+    </p>
+            </div>
+            <div class="detail-block result">
+                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
+                <p><strong>Established BrownieVerse as Salé's premium artisan brownie brand</strong>, 
+        enabling premium pricing in a competitive market. The strategic ordering system 
+        and "Pirate Crew" loyalty program drove <strong>100+ early customers</strong> and 
+        <strong>50+ repeat buyers</strong> within the first launch cycle. 
+        WhatsApp integration achieved <strong>&lt;60s confirmation times</strong>, 
+        building trust and reducing order abandonment. The culturally-rooted brand identity 
+        created a defensible position that competitors cannot easily replicate.</p> </div>
+        </div>
+        <!-- Optional: Live Preview Link -->
+        <a href="https://brownieverse.github.io/Order-Now/" target="_blank" rel="noopener" class="project-live-link">
+            <i class="fas fa-external-link-alt"></i> View Live Site
+        </a>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -341,7 +404,7 @@
                     <p class="service-desc">
                         Build a brand that commands respect before you say a word. From logo systems to 
                         complete visual identities, I create brands that position you as the premium choice 
-                        in your market — and make clients want to pay more.
+                        in your market, and make clients want to pay more.
                     </p>
                     <ul class="service-list">
                         <li>Logo & Visual Identity System</li>
@@ -371,6 +434,26 @@
                     </ul>
                     <a href="#contact" class="service-link">Elevate Your Feed <i class="fas fa-arrow-right"></i></a>
                 </div>
+
+                <div class="service-card reveal-up delay-3">
+    <div class="service-number">04</div>
+    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+    <h3 class="service-title">Website Design & Development</h3>
+    <p class="service-desc">
+        Transform your digital presence with a website that's as functional as it is beautiful. 
+        I build fast, responsive, conversion-focused websites that turn visitors into customers 
+        and reflect your brand's unique value.
+    </p>
+    <ul class="service-list">
+        <li>Custom WordPress / Webflow Development</li>
+        <li>Mobile-First Responsive Design</li>
+        <li>UX/UI Strategy & Wireframing</li>
+        <li>Performance Optimization (Core Web Vitals)</li>
+        <li>SEO-Friendly Structure & Analytics Setup</li>
+        <li>Ongoing Maintenance & Support</li>
+    </ul>
+    <a href="#contact" class="service-link">Build Your Website <i class="fas fa-arrow-right"></i></a>
+</div>
 
                 <div class="service-card featured reveal-up delay-1">
                     <div class="service-number">03</div>
