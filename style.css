@@ -266,6 +266,128 @@ ul { list-style: none; }
   transition: transform var(--transition-normal), opacity var(--transition-normal);
 }
 
+/* ─── VIDEO PROJECT CARD STYLES ───────────────────── */
+.project-visual-video {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-video.loaded {
+  opacity: 1;
+}
+
+.project-visual-video .project-image {
+  /* Fallback image styling */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(45, 153, 102, 0.95);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all var(--transition-normal);
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+}
+
+.video-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--color-primary-hover);
+}
+
+.video-play-btn.playing {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.project-card:hover .video-play-btn:not(.playing) {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Live preview link style */
+.project-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: color var(--transition-fast);
+}
+
+.project-live-link:hover {
+  color: var(--color-primary-hover);
+}
+
+.project-live-link i {
+  font-size: 0.875rem;
+  transition: transform var(--transition-fast);
+}
+
+.project-live-link:hover i {
+  transform: translateX(2px);
+}
+
+/* ─── WEBSITE SERVICE CARD ENHANCEMENTS ───────────── */
+.service-card:nth-child(4) .service-icon {
+  /* Optional: Different icon color for website service */
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+}
+
+/* ─── VIDEO CONTROLS (optional minimal controls) ─── */
+.project-video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Show controls on hover for desktop */
+@media (hover: hover) {
+  .project-visual-video:hover .project-video::-webkit-media-controls {
+    display: flex !important;
+  }
+}
+
+/* ─── MOBILE VIDEO OPTIMIZATION ───────────────────── */
+@media (max-width: 767px) {
+  .video-play-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 1.125rem;
+  }
+  
+  .project-live-link {
+    font-size: 0.875rem;
+  }
+}
+
 /* Mobile Menu */
 .mobile-menu {
   position: fixed;
