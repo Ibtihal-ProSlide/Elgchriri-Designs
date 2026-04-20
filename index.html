@@ -6,7 +6,8 @@
     <title>Portfolio — Strategic Design Studio</title>
     <meta name="description" content="I design brands that convert and stand out. Premium design studio for ambitious businesses.">
     <meta name="theme-color" content="#0a0a0a">
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +24,8 @@
     <nav class="nav" id="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <span class="logo-mark">✦</span>
-                <span class="logo-text">Studio</span>
+                <span class="logo-mark">ED</span>
+                <span class="logo-text">Portfolio</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -118,7 +119,6 @@
                                  class="about-photo"
                                  loading="lazy">
                         </div>
-                            
                         <div class="about-tag about-tag-1">
                             <i class="fas fa-award"></i>
                             Premium Designer
@@ -182,17 +182,17 @@
                 </p>
             </div>
 
+            <!-- ✨ Fixed: Portfolio Filters with Website Design option -->
             <div class="portfolio-filters reveal-up delay-1" role="tablist" aria-label="Filter projects by category">
                 <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-pressed="true" tabindex="0">All</button>
                 <button class="filter-btn" data-filter="branding" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Branding</button>
                 <button class="filter-btn" data-filter="social" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Social Media</button>
-                 <button class="filter-btn" data-filter="website" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Website Design</button>
-</div>
+                <button class="filter-btn" data-filter="website" role="tab" aria-selected="false" aria-pressed="false" tabindex="0">Website Design</button>
             </div>
 
             <div class="portfolio-grid" role="tabpanel">
                 
-                <!-- Project 1: BrownieVerse -->
+                <!-- Project 1: BrownieVerse (Social) -->
                 <div class="project-card reveal-up delay-1" data-category="social">
                     <div class="project-visual">
                         <img src="brownieverse.png" 
@@ -224,7 +224,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Aura -->
+                <!-- Project 2: Aura (Social) -->
                 <div class="project-card reveal-up delay-2" data-category="social">
                     <div class="project-visual">
                         <img src="Aura.png" 
@@ -256,7 +256,7 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Verdant -->
+                <!-- Project 3: Verdant (Branding) -->
                 <div class="project-card reveal-up delay-3" data-category="branding">
                     <div class="project-visual">
                         <img src="verdant.png" 
@@ -288,7 +288,7 @@
                     </div>
                 </div>
 
-                <!-- Project 4: Atlas -->
+                <!-- Project 4: Atlas (Branding) -->
                 <div class="project-card reveal-up delay-1" data-category="branding">
                     <div class="project-visual">
                         <img src="atlas.webp" 
@@ -319,68 +319,52 @@
                         </div>
                     </div>
                 </div>
-<!-- Project 5: Website Design Example -->
-<div class="project-card reveal-up delay-2" data-category="website">
-    <div class="project-visual project-visual-video">
-        <!-- Video Player with Fallback Image -->
-        <video 
-            class="project-video" 
-            poster="website-preview-thumb.jpg" 
-            preload="metadata" 
-            playsinline 
-            muted 
-            loop
-            aria-label="Website design preview video">
-            <source src="website-preview.mp4" type="video/mp4">
-            <!-- Fallback image if video fails to load -->
-            <img src="website-fallback.png" alt="Website design preview" class="project-image">
-        </video>
-        
-        <!-- Play Button Overlay (triggers video play on click) -->
-        <button class="video-play-btn" aria-label="Play preview video">
-            <i class="fas fa-play"></i>
-        </button>
-        
-        <div class="project-category-tag">Website Design</div>
-    </div>
-    <div class="project-content">
-        <div class="project-meta">
-            <span class="project-number">05</span>
-            <span class="project-type">Web Design + Development</span>
-        </div>
-        <h3 class="project-title">BrownieVerse — Premium E-commerce Website</h3>
-        <div class="project-details">
-            <div class="detail-block">
-                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
-                <p>A Start-up Moroccan Brand needed a high-converting website that reflected their premium positioning while providing an intuitive shopping experience across all devices.</p>
-            </div>
-            <div class="detail-block">
-                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
-                <p>  <strong>End-to-end brand system + conversion-focused ordering experience</strong>, 
-        designed to position BrownieVerse as a premium artisan brand in Morocco's competitive dessert market. 
-        Delivered a culturally-rooted visual identity (Moroccan-global fusion aesthetics), 
-        a streamlined <strong>"Commandi Online" ordering flow</strong> with clear delivery windows, 
-        and WhatsApp integration for <strong>&lt;60s order confirmations</strong>. 
-        Built the <strong>"Pirate Crew" loyalty program</strong> to drive retention through exclusivity, 
-        lifetime price locks, and behind-the-scenes access — turning one-time buyers into brand advocates.
-    </p>
-            </div>
-            <div class="detail-block result">
-                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
-                <p><strong>Established BrownieVerse as Salé's premium artisan brownie brand</strong>, 
-        enabling premium pricing in a competitive market. The strategic ordering system 
-        and "Pirate Crew" loyalty program drove <strong>100+ early customers</strong> and 
-        <strong>50+ repeat buyers</strong> within the first launch cycle. 
-        WhatsApp integration achieved <strong>&lt;60s confirmation times</strong>, 
-        building trust and reducing order abandonment. The culturally-rooted brand identity 
-        created a defensible position that competitors cannot easily replicate.</p> </div>
-        </div>
-        <!-- Optional: Live Preview Link -->
-        <a href="https://brownieverse.github.io/Order-Now/" target="_blank" rel="noopener" class="project-live-link">
-            <i class="fas fa-external-link-alt"></i> View Live Site
-        </a>
-    </div>
-</div>
+
+                <!-- ✨ Project 5: BrownieVerse Website (Video Preview) -->
+                <div class="project-card reveal-up delay-2" data-category="website">
+                    <div class="project-visual project-visual-video">
+                        <video 
+                            class="project-video" 
+                            poster="website-preview-thumb.jpg" 
+                            preload="metadata" 
+                            playsinline 
+                            muted 
+                            loop
+                            aria-label="BrownieVerse website design preview video">
+                            <source src="website-preview.mp4" type="video/mp4">
+                            <img src="website-fallback.png" alt="BrownieVerse website design preview" class="project-image">
+                        </video>
+                        <button class="video-play-btn" aria-label="Play preview video">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="project-category-tag">Website Design</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-number">05</span>
+                            <span class="project-type">Web Design + Development</span>
+                        </div>
+                        <h3 class="project-title">BrownieVerse — Premium E-commerce Website</h3>
+                        <div class="project-details">
+                            <div class="detail-block">
+                                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
+                                <p>A Start-up Moroccan Brand needed a high-converting website that reflected their premium positioning while providing an intuitive shopping experience across all devices.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
+                                <p><strong>End-to-end brand system + conversion-focused ordering experience</strong>, designed to position BrownieVerse as a premium artisan brand in Morocco's competitive dessert market. Delivered a culturally-rooted visual identity (Moroccan-global fusion aesthetics), a streamlined <strong>"Commandi Online" ordering flow</strong> with clear delivery windows, and WhatsApp integration for <strong>&lt;60s order confirmations</strong>. Built the <strong>"Pirate Crew" loyalty program</strong> to drive retention through exclusivity, lifetime price locks, and behind-the-scenes access — turning one-time buyers into brand advocates.</p>
+                            </div>
+                            <div class="detail-block result">
+                                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
+                                <p><strong>Established BrownieVerse as Salé's premium artisan brownie brand</strong>, enabling premium pricing in a competitive market. The strategic ordering system and "Pirate Crew" loyalty program drove <strong>100+ early customers</strong> and <strong>50+ repeat buyers</strong> within the first launch cycle. WhatsApp integration achieved <strong>&lt;60s confirmation times</strong>, building trust and reducing order abandonment.</p>
+                            </div>
+                        </div>
+                        <a href="https://brownieverse.github.io/Order-Now/" target="_blank" rel="noopener" class="project-live-link">
+                            <i class="fas fa-external-link-alt"></i> View Live Site
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -454,27 +438,26 @@
                     <a href="#contact" class="service-link">Tell Me Your Vision <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-<div class="service-card reveal-up delay-3">
-    <div class="service-number">04</div>
-    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-    <h3 class="service-title">Website Design & Development</h3>
-    <p class="service-desc">
-        Transform your digital presence with a website that's as functional as it is beautiful. 
-        I build fast, responsive, conversion-focused websites that turn visitors into customers 
-        and reflect your brand's unique value.
-    </p>
-    <ul class="service-list">
-        <li>Custom WordPress / Webflow Development</li>
-        <li>Mobile-First Responsive Design</li>
-        <li>UX/UI Strategy & Wireframing</li>
-        <li>Performance Optimization (Core Web Vitals)</li>
-        <li>SEO-Friendly Structure & Analytics Setup</li>
-        <li>Ongoing Maintenance & Support</li>
-    </ul>
-    <a href="#contact" class="service-link">Build Your Website <i class="fas fa-arrow-right"></i></a>
-</div>
-
-                
+                <!-- ✨ NEW: Website Design Service Card -->
+                <div class="service-card reveal-up delay-3">
+                    <div class="service-number">04</div>
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="service-title">Website Design & Development</h3>
+                    <p class="service-desc">
+                        Transform your digital presence with a website that's as functional as it is beautiful. 
+                        I build fast, responsive, conversion-focused websites that turn visitors into customers 
+                        and reflect your brand's unique value.
+                    </p>
+                    <ul class="service-list">
+                        <li>Custom WordPress / Webflow Development</li>
+                        <li>Mobile-First Responsive Design</li>
+                        <li>UX/UI Strategy & Wireframing</li>
+                        <li>Performance Optimization (Core Web Vitals)</li>
+                        <li>SEO-Friendly Structure & Analytics Setup</li>
+                        <li>Ongoing Maintenance & Support</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Build Your Website <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -674,6 +657,8 @@
                                 <option value="">Select a service...</option>
                                 <option value="branding">Branding & Identity Design</option>
                                 <option value="social">Social Media Design</option>
+                                <!-- ✨ Added Website Design option -->
+                                <option value="website">Website Design & Development</option>
                                 <option value="custom">Custom Creative Project</option>
                                 <option value="other">Not sure yet</option>
                             </select>
@@ -744,6 +729,8 @@
                     <ul>
                         <li><a href="#services">Branding & Identity</a></li>
                         <li><a href="#services">Social Media Design</a></li>
+                        <!-- ✨ Added Website Design to footer -->
+                        <li><a href="#services">Website Design</a></li>
                         <li><a href="#services">Custom Projects</a></li>
                     </ul>
                 </div>
