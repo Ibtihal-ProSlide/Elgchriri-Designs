@@ -1,5 +1,6 @@
 /* ═══════════════════════════════════════════════════
    PORTFOLIO — MAIN JAVASCRIPT
+   Updated: Video handling with fallback support
    ═══════════════════════════════════════════════════ */
 
 'use strict';
@@ -58,25 +59,37 @@ function initNavbar() {
 /* ─── IMAGE & VIDEO FADE-IN LOADERS ───────────────── */
 function initImageLoaders() {
     const loadMedia = (media) => {
-        if (media.complete || media.readyState >= 2) {
-            media.classList.add('loaded');
-        } else {
-            const onLoad = () => {
+        if (media.tagName === 'IMG') {
+            // Handle images
+            if (media.complete) {
                 media.classList.add('loaded');
-                media.removeEventListener('load', onLoad);
-                media.removeEventListener('error', onError);
-            };
-            const onError = () => {
-                media.style.opacity = '1';
-                media.removeEventListener('load', onLoad);
-                media.removeEventListener('error', onError);
-            };
-            media.addEventListener('load', onLoad, { once: true });
-            media.addEventListener('error', onError, { once: true });
+            } else {
+                const onLoad = () => {
+                    media.classList.add('loaded');
+                    media.removeEventListener('load', onLoad);
+                    media.removeEventListener('error', onError);
+                };
+                const onError = () => {
+                    media.style.opacity = '1';
+                    media.removeEventListener('load', onLoad);
+                    media.removeEventListener('error', onError);
+                };
+                media.addEventListener('load', onLoad, { once: true });
+                media.addEventListener('error', onError, { once: true });
+            }
+        } else if (media.tagName === 'VIDEO') {
+            // Handle videos - add loaded class when ready
+            if (media.readyState >= 2) {
+                media.classList.add('loaded');
+            } else {
+                media.addEventListener('loadeddata', () => {
+                    media.classList.add('loaded');
+                }, { once: true });
+            }
         }
     };
 
-    document.querySelectorAll('.about-photo, .project-image, .project-video').forEach(loadMedia);
+    document.querySelectorAll('.about-photo, .project-image').forEach(loadMedia);
 }
 
 /* ─── MOBILE MENU ─────────────────────────────────── */
@@ -132,54 +145,123 @@ function initMobileMenu() {
     });
 }
 
-/* ─── VIDEO PROJECT CARD INTERACTIONS ─────────────── */
+/* ─── VIDEO PROJECT CARD INTERACTIONS (IMPROVED) ─── */
 function initVideoCards() {
     const videoCards = document.querySelectorAll('.project-visual-video');
     
-    videoCards.forEach(card => {
+    if (videoCards.length === 0) {
+        console.log('No video cards found');
+        return;
+    }
+    
+    console.log(`Initializing ${videoCards.length} video card(s)`);
+    
+    videoCards.forEach((card, index) => {
         const video = card.querySelector('.project-video');
         const playBtn = card.querySelector('.video-play-btn');
-        const poster = card.querySelector('.project-image');
+        const fallbackImg = card.querySelector('.project-image');
         
-        if (!video || !playBtn) return;
+        if (!video) {
+            console.error(`Video element not found in card ${index}`);
+            return;
+        }
         
+        if (!playBtn) {
+            console.error(`Play button not found in card ${index}`);
+            return;
+        }
+        
+        console.log(`Setting up video card ${index + 1}`);
+        
+        // Show fallback image initially
+        if (fallbackImg) {
+            fallbackImg.style.opacity = '1';
+            fallbackImg.classList.add('loaded');
+            console.log('Fallback image shown');
+        }
+        
+        // Load video when in viewport
         const videoObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
+                console.log('Video in viewport - loading...');
                 video.load();
+                
+                // Video loaded successfully
+                video.addEventListener('loadeddata', () => {
+                    console.log('✅ Video loaded successfully');
+                    video.classList.add('loaded');
+                    // Hide fallback when video is ready
+                    if (fallbackImg) {
+                        fallbackImg.style.opacity = '0';
+                    }
+                }, { once: true });
+                
+                // Video failed to load
+                video.addEventListener('error', (e) => {
+                    console.error('❌ Video failed to load:', e);
+                    // Keep fallback visible
+                    if (fallbackImg) {
+                        fallbackImg.style.opacity = '1';
+                        fallbackImg.classList.add('loaded');
+                    }
+                    // Hide play button if video can't load
+                    playBtn.style.display = 'none';
+                }, { once: true });
+                
                 videoObserver.unobserve(video);
             }
         }, { threshold: 0.1 });
         
         videoObserver.observe(video);
         
+        // Play/Pause functionality
         playBtn.addEventListener('click', (e) => {
             e.stopPropagation();
+            console.log('Play button clicked');
             
             if (video.paused) {
                 video.play().then(() => {
+                    console.log('▶️ Video playing');
                     playBtn.classList.add('playing');
+                    // Hide fallback when playing
+                    if (fallbackImg) {
+                        fallbackImg.style.opacity = '0';
+                    }
+                    // Show controls on desktop
                     if (window.innerWidth >= 768) {
                         video.controls = true;
                     }
                 }).catch(err => {
-                    console.warn('Video play failed:', err);
-                    if (poster) poster.style.opacity = '1';
+                    console.error('❌ Video play failed:', err);
+                    // Show fallback on error
+                    if (fallbackImg) {
+                        fallbackImg.style.opacity = '1';
+                    }
                 });
             } else {
+                console.log('⏸️ Video paused');
                 video.pause();
                 playBtn.classList.remove('playing');
                 video.controls = false;
             }
         });
         
+        // Reset when video ends
         video.addEventListener('ended', () => {
+            console.log('⏹️ Video ended');
             playBtn.classList.remove('playing');
             video.currentTime = 0;
             video.controls = false;
+            // Show fallback again
+            if (fallbackImg) {
+                fallbackImg.style.opacity = '1';
+            }
         });
         
+        // Pause when out of viewport
         const pauseObserver = new IntersectionObserver((entries) => {
             if (!entries[0].isIntersecting && !video.paused) {
+                console.log('Video out of viewport - pausing');
                 video.pause();
                 playBtn.classList.remove('playing');
                 video.controls = false;
@@ -711,7 +793,7 @@ function debounce(func, wait) {
 
 /* ─── CONSOLE WELCOME ─────────────────────────────── */
 console.log(
-    '%c Strategic Elgchiri Designs %c\n\nBuilt with intention.\nInterested in working together? Let\'s talk: elgchiriibtihal@gmail.com',
+    '%c Elgchiri Designs %c\n\nBuilt with intention.\nInterested in working together? Let\'s talk: elgchiriibtihal@gmail.com',
     'background: linear-gradient(135deg, #1a6b4a, #2d9966); color: white; padding: 8px 16px; border-radius: 4px; font-weight: bold;',
     'color: #6b7280;'
 );
