@@ -320,51 +320,62 @@
                     </div>
                 </div>
 
-                <!-- ✨ Project 5: BrownieVerse Website (Video Preview) -->
-                <div class="project-card reveal-up delay-2" data-category="website">
-                    <div class="project-visual project-visual-video">
-                        <video 
-                            class="project-video" 
-                            poster="website-preview-thumb.jpg" 
-                            preload="metadata" 
-                            playsinline 
-                            muted 
-                            loop
-                            aria-label="BrownieVerse website design preview video">
-                            <source src="website-preview.mp4" type="video/mp4">
-                            <img src="website-fallback.png" alt="BrownieVerse website design preview" class="project-image">
-                        </video>
-                        <button class="video-play-btn" aria-label="Play preview video">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <div class="project-category-tag">Website Design</div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <span class="project-number">05</span>
-                            <span class="project-type">Web Design + Development</span>
-                        </div>
-                        <h3 class="project-title">BrownieVerse — Premium E-commerce Website</h3>
-                        <div class="project-details">
-                            <div class="detail-block">
-                                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
-                                <p>A Start-up Moroccan Brand needed a high-converting website that reflected their premium positioning while providing an intuitive shopping experience across all devices.</p>
-                            </div>
-                            <div class="detail-block">
-                                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
-                                <p><strong>End-to-end brand system + conversion-focused ordering experience</strong>, designed to position BrownieVerse as a premium artisan brand in Morocco's competitive dessert market. Delivered a culturally-rooted visual identity (Moroccan-global fusion aesthetics), a streamlined <strong>"Commandi Online" ordering flow</strong> with clear delivery windows, and WhatsApp integration for <strong>&lt;60s order confirmations</strong>. Built the <strong>"Pirate Crew" loyalty program</strong> to drive retention through exclusivity, lifetime price locks, and behind-the-scenes access — turning one-time buyers into brand advocates.</p>
-                            </div>
-                            <div class="detail-block result">
-                                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
-                                <p><strong>Established BrownieVerse as Salé's premium artisan brownie brand</strong>, enabling premium pricing in a competitive market. The strategic ordering system and "Pirate Crew" loyalty program drove <strong>100+ early customers</strong> and <strong>50+ repeat buyers</strong> within the first launch cycle. WhatsApp integration achieved <strong>&lt;60s confirmation times</strong>, building trust and reducing order abandonment.</p>
-                            </div>
-                        </div>
-                        <a href="https://brownieverse.github.io/Order-Now/" target="_blank" rel="noopener" class="project-live-link">
-                            <i class="fas fa-external-link-alt"></i> View Live Site
-                        </a>
-                    </div>
-                </div>
-
+            <!-- ✨ Project 5: BrownieVerse Website (Video Preview) -->
+<div class="project-card reveal-up delay-2" data-category="website">
+    <div class="project-visual project-visual-video">
+        <!-- Fallback Image (shows by default) -->
+        <img src="website-fallback.png" 
+             alt="BrownieVerse website design preview" 
+             class="project-image loaded"
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+        
+        <!-- Video Player (loads on top) -->
+        <video 
+            class="project-video" 
+            poster="website-preview-thumb.jpg" 
+            preload="metadata" 
+            playsinline 
+            muted 
+            loop
+            style="position: relative; z-index: 2;"
+            aria-label="BrownieVerse website design preview video">
+            <source src="website-preview.mp4" type="video/mp4">
+            <!-- If video fails, this message shows -->
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Play Button (visible when video is ready) -->
+        <button class="video-play-btn" aria-label="Play preview video" style="z-index: 3;">
+            <i class="fas fa-play"></i>
+        </button>
+        
+        <div class="project-category-tag">Website Design</div>
+    </div>
+    <div class="project-content">
+        <div class="project-meta">
+            <span class="project-number">05</span>
+            <span class="project-type">Web Design + Development</span>
+        </div>
+        <h3 class="project-title">BrownieVerse — Premium E-commerce Website</h3>
+        <div class="project-details">
+            <div class="detail-block">
+                <h4><i class="fas fa-crosshairs"></i> The Challenge</h4>
+                <p>A Start-up Moroccan Brand needed a high-converting website that reflected their premium positioning while providing an intuitive shopping experience across all devices.</p>
+            </div>
+            <div class="detail-block">
+                <h4><i class="fas fa-pencil-ruler"></i> The Solution</h4>
+                <p><strong>End-to-end brand system + conversion-focused ordering experience</strong>, designed to position BrownieVerse as a premium artisan brand in Morocco's competitive dessert market. Delivered a culturally-rooted visual identity (Moroccan-global fusion aesthetics), a streamlined <strong>"Commandi Online" ordering flow</strong> with clear delivery windows, and WhatsApp integration for <strong>&lt;60s order confirmations</strong>. Built the <strong>"Pirate Crew" loyalty program</strong> to drive retention through exclusivity, lifetime price locks, and behind-the-scenes access — turning one-time buyers into brand advocates.</p>
+            </div>
+            <div class="detail-block result">
+                <h4><i class="fas fa-chart-bar"></i> The Impact</h4>
+                <p><strong>Established BrownieVerse as Salé's premium artisan brownie brand</strong>, enabling premium pricing in a competitive market. The strategic ordering system and "Pirate Crew" loyalty program drove <strong>100+ early customers</strong> and <strong>50+ repeat buyers</strong> within the first launch cycle. WhatsApp integration achieved <strong>&lt;60s confirmation times</strong>, building trust and reducing order abandonment.</p>
+            </div>
+        </div>
+        <a href="https://brownieverse.github.io/Order-Now/" target="_blank" rel="noopener" class="project-live-link">
+            <i class="fas fa-external-link-alt"></i> View Live Site
+        </a>
+    </div>
+</div>
             </div>
         </div>
     </section>
